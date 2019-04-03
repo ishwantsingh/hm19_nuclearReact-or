@@ -4,10 +4,14 @@ import styled from "styled-components";
 import Dropdown from "./Dropdown";
 
 const StyledContainer = styled.div`
+  width: 100%;
   display: flex;
 `;
 const Form = styled.form`
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 `;
 class Home extends React.Component {
   state = {
@@ -27,36 +31,37 @@ class Home extends React.Component {
     return (
       <StyledContainer>
         <Form onSubmit={this.handleSubmit}>
-          <h5>Select Starting Point</h5>
-
-          <div className="input-field">
-            <label htmlFor="type">
-              <input
-                list="types"
-                name="myType"
-                type="text"
-                id="type"
-                placeholder="Select Post Type:"
-                onChange={this.handleChange}
-              />
-            </label>
-            <Dropdown />
+          <div>
+            <h5>Select Starting Point</h5>
+            <div className="input-field">
+              <label htmlFor="type">
+                <input
+                  list="types"
+                  name="myType"
+                  type="text"
+                  id="type"
+                  placeholder="Select Post Type:"
+                  onChange={this.handleChange}
+                />
+              </label>
+              <Dropdown />
+            </div>
           </div>
-          <br />
-          <h5>Select Destination</h5>
-
-          <div className="input-field">
-            <label htmlFor="type">
-              <input
-                list="types"
-                name="myType"
-                type="text"
-                id="type"
-                placeholder="Select Post Type:"
-                onChange={this.handleChange}
-              />
-            </label>
-            <Dropdown />
+          <div>
+            <h5>Select Destination</h5>
+            <div className="input-field">
+              <label htmlFor="type">
+                <input
+                  list="types"
+                  name="myType"
+                  type="text"
+                  id="type"
+                  placeholder="Select Post Type:"
+                  onChange={this.handleChange}
+                />
+              </label>
+              <Dropdown />
+            </div>
           </div>
           <div className="input-field">
             <button>Show Info</button>

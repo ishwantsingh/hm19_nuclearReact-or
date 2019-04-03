@@ -7,6 +7,7 @@ import styled from "styled-components";
 import "./App.css";
 
 import Headbar from "./components/layout/Headbar";
+import About from "./components/layout/About";
 import Home from "./components/Home";
 
 class App extends Component {
@@ -15,9 +16,12 @@ class App extends Component {
       <Router>
         <div>
           <Headbar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-          </Switch>
+          <div>
+            <About />
+            <Switch>
+              <Route exact path="/" component={Home} />
+            </Switch>
+          </div>
         </div>
       </Router>
     );
