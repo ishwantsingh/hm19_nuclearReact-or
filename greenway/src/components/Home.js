@@ -59,7 +59,7 @@ class Home extends React.Component {
             <Dropdown />
           </div>
           <div className="input-field">
-            <button>Create</button>
+            <button>Show Info</button>
           </div>
         </Form>
       </StyledContainer>

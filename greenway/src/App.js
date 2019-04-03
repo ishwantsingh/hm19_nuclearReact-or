@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 import "./App.css";
 
+import Headbar from "./components/layout/Headbar";
 import Home from "./components/Home";
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Headbar />
           <Switch>
             <Route exact path="/" component={Home} />
           </Switch>
