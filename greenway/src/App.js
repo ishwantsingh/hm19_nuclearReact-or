@@ -35,6 +35,10 @@ class App extends Component {
           <StyledDiv>
             <About />
             <Home />
+            <br />
+            <br />
+            <br />
+
             <div className="data">
               <Switchbar />
               <Switch>
