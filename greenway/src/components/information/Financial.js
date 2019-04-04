@@ -6,7 +6,6 @@ const Styledcontainer = styled.div`
   dispaly: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid grey;
   text-align: center;
   width: 100%;
   margin: 50px auto;
@@ -18,10 +17,10 @@ const Styledcontainer = styled.div`
 const Financial = props => {
   function carFuel() {
     if (props.difference === 0) {
-      var cost = 0;
+      let cost = 0;
       return Math.round(cost);
     } else {
-      var cost = props.distance * 7.5;
+      let cost = props.distance * 7.5;
       return Math.round(65 + cost);
     }
   }
@@ -30,16 +29,16 @@ const Financial = props => {
       var cost = 10;
     } else if (props.difference === 0) {
       var cost = 0;
-    } else if (props.difference == 2 || props.difference == 3) {
+    } else if (props.difference === 2 || props.difference === 3) {
       var cost = 20;
     } else if (
-      props.difference == 4 ||
-      props.difference == 5 ||
-      props.difference == 6 ||
-      props.difference == 7 ||
-      props.difference == 8 ||
-      props.difference == 9 ||
-      props.difference == 10
+      props.difference === 4 ||
+      props.difference === 5 ||
+      props.difference === 6 ||
+      props.difference === 7 ||
+      props.difference === 8 ||
+      props.difference === 9 ||
+      props.difference === 10
     ) {
       var cost = 30;
     } else if (props.difference >= 11) {
@@ -73,7 +72,6 @@ const Financial = props => {
   }
 };
 function mapStateToProps(state) {
-  console.log(state);
   return {
     distance: state.distance,
     start: state.start,

@@ -9,7 +9,7 @@ import "./App.css";
 import Headbar from "./components/layout/Headbar";
 import About from "./components/layout/About";
 import Home from "./components/Home";
-import Information from "./components/information/Information";
+//import Information from "./components/information/Information";
 import Financial from "./components/information/Financial";
 import Environmental from "./components/information/Environmental";
 import Switchbar from "./components/layout/Switchbar";

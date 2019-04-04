@@ -12,8 +12,19 @@ const StyledContainer = styled.div`
 const Form = styled.form`
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  .form-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .input-sect {
+      margin: 0 5%;
+    }
+  }
 `;
 class Home extends React.Component {
   state = {
@@ -43,42 +54,50 @@ class Home extends React.Component {
     return (
       <StyledContainer>
         <Form onSubmit={this.handleSubmit}>
-          <div>
-            <h5>Select Starting Point</h5>
-            <div className="input-field">
-              <label htmlFor="type">
-                <input
-                  ref={this.startRef}
-                  list="types"
-                  name="myType"
-                  type="text"
-                  id="start"
-                  placeholder="Select Station:"
-                  onChange={this.handleChange}
-                />
-              </label>
-              <Dropdown />
+          <div className="form-section">
+            <div className="input-sect">
+              <h5>Select Starting Point</h5>
+              <div className="input-field">
+                <label htmlFor="type">
+                  <input
+                    ref={this.startRef}
+                    list="types"
+                    name="myType"
+                    type="text"
+                    id="start"
+                    placeholder="Select Station:"
+                    onChange={this.handleChange}
+                  />
+                </label>
+                <Dropdown />
+              </div>
+            </div>
+            <div className="input-sect">
+              <h5>Select Destination</h5>
+              <div className="input-field">
+                <label htmlFor="type">
+                  <input
+                    ref={this.endRef}
+                    list="types"
+                    name="myType"
+                    type="text"
+                    id="end"
+                    placeholder="Select Station:"
+                    onChange={this.handleChange}
+                  />
+                </label>
+                <Dropdown />
+              </div>
             </div>
           </div>
-          <div>
-            <h5>Select Destination</h5>
-            <div className="input-field">
-              <label htmlFor="type">
-                <input
-                  ref={this.endRef}
-                  list="types"
-                  name="myType"
-                  type="text"
-                  id="end"
-                  placeholder="Select Station:"
-                  onChange={this.handleChange}
-                />
-              </label>
-              <Dropdown />
-            </div>
-          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
           <div className="input-field">
-            <button>Show Info</button>
+            <button className="waves-effect btn">Show Info</button>
           </div>
         </Form>
       </StyledContainer>
