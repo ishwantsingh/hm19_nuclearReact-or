@@ -20,6 +20,10 @@ class Home extends React.Component {
     start: "",
     end: ""
   };
+
+  startRef = React.createRef();
+  endRef = React.createRef();
+
   handleChange = e => {
     this.setState({
       [e.target.id]: e.target.value
@@ -28,7 +32,12 @@ class Home extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.getInfo(this.state.start, this.state.end);
-    console.log(this.state);
+    this.setState({
+      start: "",
+      end: ""
+    });
+    this.startRef.current.value = "";
+    this.endRef.current.value = "";
   };
   render() {
     return (
@@ -39,6 +48,7 @@ class Home extends React.Component {
             <div className="input-field">
               <label htmlFor="type">
                 <input
+                  ref={this.startRef}
                   list="types"
                   name="myType"
                   type="text"
@@ -55,6 +65,7 @@ class Home extends React.Component {
             <div className="input-field">
               <label htmlFor="type">
                 <input
+                  ref={this.endRef}
                   list="types"
                   name="myType"
                   type="text"
