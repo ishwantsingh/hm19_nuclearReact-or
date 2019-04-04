@@ -11,10 +11,10 @@ function Dropdown() {
       <option value="Kirti Nagar" />
       <option value="Shadipur" />
       <option value="Patel Nagar" />
-      <option value="Rajendra Place	" />
+      <option value="Rajendra Place" />
       <option value="Karol Bagh" />
-      <option value="Jhandewalan	" />
-      <option value="Ramakrishna Ashram Marg	" />
+      <option value="Jhandewalan" />
+      <option value="Ramakrishna Ashram Marg" />
       <option value="Rajiv Chowk" />
     </datalist>
   );

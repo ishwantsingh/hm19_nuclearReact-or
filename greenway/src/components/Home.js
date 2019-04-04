@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import connect from "react-redux";
 
 import Dropdown from "./Dropdown";
 
@@ -72,4 +73,7 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default connect(
+  st => st,
+  null
+)(Home);
