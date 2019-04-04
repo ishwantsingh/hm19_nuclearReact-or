@@ -40,7 +40,7 @@ class Home extends React.Component {
                   name="myType"
                   type="text"
                   id="type"
-                  placeholder="Select Post Type:"
+                  placeholder="Select Station:"
                   onChange={this.handleChange}
                 />
               </label>
@@ -56,7 +56,7 @@ class Home extends React.Component {
                   name="myType"
                   type="text"
                   id="type"
-                  placeholder="Select Post Type:"
+                  placeholder="Select Station:"
                   onChange={this.handleChange}
                 />
               </label>
