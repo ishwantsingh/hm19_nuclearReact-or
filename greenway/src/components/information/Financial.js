@@ -60,7 +60,7 @@ const Financial = props => {
         </div>{" "}
         <div>
           Travelling Cost via Metro between {props.start} and {props.end} is
-          about {metroCost()}Rs.
+          {metroCost()}Rs.
         </div>
       </Styledcontainer>
     );
