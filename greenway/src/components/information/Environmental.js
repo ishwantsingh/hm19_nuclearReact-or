@@ -8,11 +8,16 @@ const Styledcontainer = styled.div`
   justify-content: center;
   text-align: center;
   width: 100%;
-  margin-top: 50px;
   margin-bottom: 0px;
   margin-right: 7%;
-  margin-left: 21%;
-
+  margin-left: 6.1%;
+  div {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    span {
+      font-weight: bold;
+    }
+  }
   font-size: 1.3rem;
   text-align: left;
   .no-data-div {
@@ -50,6 +55,10 @@ const Environmental = props => {
   if (props.start && props.end) {
     return (
       <Styledcontainer className="card-action">
+        <div className="card-text">
+          Environmental Information for route between <span>{props.start}</span>{" "}
+          and <span>{props.end}</span> :{" "}
+        </div>
         <table className="striped highlight">
           <thead>
             <tr>
@@ -78,7 +87,7 @@ const Environmental = props => {
   } else {
     return (
       <Styledcontainer>
-        <div className="no-data-div">Please Select Options</div>
+        <div className="no-data-div">Please Select Stations</div>
       </Styledcontainer>
     );
   }

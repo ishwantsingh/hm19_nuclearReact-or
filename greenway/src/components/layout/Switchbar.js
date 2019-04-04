@@ -6,11 +6,11 @@ const Div = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 15%;
+  width: 22%;
   height: 100px;
-  margin: 3px 1.7% 0 0;
   align-items: space-between;
-  margin: 50px auto;
+  margin-top: 40px;
+  margin-left: 10%;
   .btn {
     background-color: rgb(43, 187, 173);
   }
