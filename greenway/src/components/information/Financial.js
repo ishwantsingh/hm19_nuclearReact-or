@@ -8,7 +8,9 @@ const Styledcontainer = styled.div`
   justify-content: center;
   text-align: center;
   width: 100%;
-  margin: 50px auto;
+  margin: 50px 7%;
+  font-size: 1.3rem;
+  text-align: left;
 `;
 
 //average fuel efficiency = 18.2km/l and petrol price: 72.6rs/lt

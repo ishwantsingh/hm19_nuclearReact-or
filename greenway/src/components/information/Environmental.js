@@ -8,7 +8,26 @@ const Styledcontainer = styled.div`
   justify-content: center;
   text-align: center;
   width: 100%;
-  margin: 50px auto;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  margin-right: 7%;
+  margin-left: 21%;
+
+  font-size: 1.3rem;
+  text-align: left;
+  .no-data-div {
+    text-align: center;
+    margin-right: 37%;
+  }
+  table {
+    width: 70%;
+    th {
+      text-align: center;
+    }
+    td {
+      text-align: center;
+    }
+  }
 `;
 // 2.354 kg CO2 per litre petrol
 
@@ -30,25 +49,36 @@ const Environmental = props => {
   }
   if (props.start && props.end) {
     return (
-      <Styledcontainer>
-        <div>
-          Carbon footprint Emmision via Car between {props.start} and{" "}
-          {props.end} is about {carPrint()} kg of CO2.
-        </div>
-        <div>
-          Carbon footprint Emmision via Bus between {props.start} and{" "}
-          {props.end} is {busPrint()} kg of CO2.
-        </div>{" "}
-        <div>
-          Carbon footprint Emmision via Metro between {props.start} and{" "}
-          {props.end} is 0kg CO2 released.
-        </div>
+      <Styledcontainer className="card-action">
+        <table className="striped highlight">
+          <thead>
+            <tr>
+              <th>Transport</th>
+              <th>Carbon Emmision</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Car</td>
+              <td>{carPrint()} kg of CO2</td>
+            </tr>
+            <tr>
+              <td>Bus</td>
+              <td>{busPrint()} kg of CO2</td>
+            </tr>
+            <tr>
+              <td>Metro</td>
+              <td>0 kg of CO2</td>
+            </tr>
+          </tbody>
+        </table>
       </Styledcontainer>
     );
   } else {
     return (
       <Styledcontainer>
-        <div>Please Select Options</div>
+        <div className="no-data-div">Please Select Options</div>
       </Styledcontainer>
     );
   }
