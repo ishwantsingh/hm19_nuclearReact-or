@@ -18,8 +18,9 @@ export default function stationReducer(state = initialState, action) {
       const endIndex = state.stations.findIndex(
         item => item.name === action.payload.end
       );
-      const distance =
-        state.stations[endIndex].position - state.stations[startIndex].position;
+      const distance = Math.abs(
+        state.stations[endIndex].position - state.stations[startIndex].position
+      );
       // console.log(state.stations);
       return {
         ...state,
