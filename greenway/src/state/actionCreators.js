@@ -1,9 +1,10 @@
-export default const getInfo = (init, end) => {
+const getInfo = (start, end) => {
   return {
     type: "GET_INFO",
     payload: {
-      init,
+      start,
       end
     }
   };
 };
+export default getInfo;

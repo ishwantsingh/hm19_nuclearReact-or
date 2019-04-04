@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import connect from "react-redux";
+import { connect } from "react-redux";
 
 import Dropdown from "./Dropdown";
+import getInfo from "../state/actionCreators";
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -26,7 +27,8 @@ class Home extends React.Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    console.log("boo");
+    this.props.getInfo(this.state.start, this.state.end);
+    console.log(this.state);
   };
   render() {
     return (
@@ -40,7 +42,7 @@ class Home extends React.Component {
                   list="types"
                   name="myType"
                   type="text"
-                  id="type"
+                  id="start"
                   placeholder="Select Station:"
                   onChange={this.handleChange}
                 />
@@ -56,7 +58,7 @@ class Home extends React.Component {
                   list="types"
                   name="myType"
                   type="text"
-                  id="type"
+                  id="end"
                   placeholder="Select Station:"
                   onChange={this.handleChange}
                 />
@@ -72,8 +74,13 @@ class Home extends React.Component {
     );
   }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    getInfo: (start, end) => dispatch(getInfo(start, end))
+  };
+};
 
 export default connect(
-  st => st,
-  null
+  null,
+  mapDispatchToProps
 )(Home);
