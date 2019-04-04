@@ -17,7 +17,7 @@ const Styledcontainer = styled.div`
   text-align: left;
   .no-data-div {
     text-align: center;
-    margin-right: 37%;
+    margin-right: 36%;
   }
   table {
     width: 70%;

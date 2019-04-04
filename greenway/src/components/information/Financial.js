@@ -8,11 +8,27 @@ const Styledcontainer = styled.div`
   justify-content: center;
   text-align: center;
   width: 100%;
-  margin: 50px 7%;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  margin-right: 7%;
+  margin-left: 21%;
+
   font-size: 1.3rem;
   text-align: left;
+  .no-data-div {
+    text-align: center;
+    margin-right: 36%;
+  }
+  table {
+    width: 70%;
+    th {
+      text-align: center;
+    }
+    td {
+      text-align: center;
+    }
+  }
 `;
-
 //average fuel efficiency = 18.2km/l and petrol price: 72.6rs/lt
 // average price of petrol per km = 4rs
 
@@ -50,25 +66,36 @@ const Financial = props => {
   }
   if (props.start && props.end) {
     return (
-      <Styledcontainer>
-        <div>
-          Travelling Cost via Car between {props.start} and {props.end} is about{" "}
-          {carFuel()}Rs.
-        </div>
-        <div>
-          Travelling Cost via Bus between {props.start} and {props.end} is{" "}
-          {metroCost() / 2}Rs.
-        </div>{" "}
-        <div>
-          Travelling Cost via Metro between {props.start} and {props.end} is
-          {metroCost()}Rs.
-        </div>
+      <Styledcontainer className="card-action">
+        <table className="striped highlight">
+          <thead>
+            <tr>
+              <th>Transport</th>
+              <th>Expenses</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Car</td>
+              <td>{carFuel()} Rs</td>
+            </tr>
+            <tr>
+              <td>Bus</td>
+              <td>{metroCost() / 2} Rs</td>
+            </tr>
+            <tr>
+              <td>Metro</td>
+              <td>{metroCost()} Rs</td>
+            </tr>
+          </tbody>
+        </table>
       </Styledcontainer>
     );
   } else {
     return (
       <Styledcontainer>
-        <div>Please Select Options</div>
+        <div className="no-data-div">Please Select Options</div>
       </Styledcontainer>
     );
   }
